@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Assignment3';
+
+    gs:string[]=["sai","niloy","tanseer","shubendu"];
+
+
 }

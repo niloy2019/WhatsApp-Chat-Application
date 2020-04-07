@@ -1,0 +1,61 @@
+<div class="col-sm-6 all" >
+
+      <!-- for the header profile picture -->
+      <div class="header">
+       <table>
+         <tr>
+          <td width="10%"><img src="./assets/arrow.jpg" alt="" style="height: 60px; padding-top: 10px;"></td >
+          <td width="12%"><img src="./assets/you.png" alt="" style="border-radius: 50%; height: 70px; padding-top: 10px;"></td>
+          <td width="10%"><p style="color:white; font-size: 25px; padding-top: 10px; ">Niloy</p>
+              <p style="color:white; font-size: 15px;">online</p></td>
+          <td width="40%"></td>
+          <td width="20%"><img src="./assets/icons.jpg" alt="" style="height: 70px; padding-top: 10px; float: right;width: 150px;"></td>    
+        </tr>
+       </table>
+      </div>
+
+      
+      <!-- for the footer input text and submit button -->
+      <div style="bottom: 10px;position: absolute;">
+        <table>
+          <tr>
+             <td  width="4%"></td>
+             <td  width="8%">   <img src="./assets/smile.jpg" alt="" style="height: 50px;float:right;"> </td>
+             <td  width="">  <input type="text" placeholder=" Type a message" #ch class="input"></td>
+             <td  width="">  <img src="./assets/camera.png" alt="" style="height: 50px; float:right; clip-path: polygon(0 0, 100% 0, 84% 36%, 85% 100%, 0 100%, 0 24%);">    </td>
+             <td  width="3%"></td>
+             <td  width="">  <button (click)="sendMessage(ch)" type="button" style="border: 0px; padding: 0px;" > <img src="./assets/sending2.png" alt="" style="height: 50px; width: 100%; background-size: cover;"></button>  </td>
+          </tr>
+        </table>
+        
+           <!-- &nbsp;&nbsp;&nbsp;  -->
+         
+      </div>
+
+
+      
+
+     <!-- for the body (chatting)  -->
+  <div class="text"   >
+
+    <span class="date">{{todayNumber | date}}</span>
+
+    <br><br>
+
+  <ng-container *ngFor ="let i of msgs" >
+    
+    <li *ngIf="i.status" style="list-style-type: none;">
+      <p   class="display ">{{i.massege}} <span class="time">{{today | date : "shortTime"}} <img src="./assets/tick.PNG" alt=""></span> </p> 
+    </li> 
+
+    <li *ngIf="!i.status" style="list-style-type: none;">
+      <p    class="display2 ">{{i.massege}} <span class="time2">{{today | date : "shortTime"}}</span>  </p> 
+    </li> 
+    
+ </ng-container>
+
+  </div>
+
+</div>
+
+
